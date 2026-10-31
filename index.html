@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10121c">
+  <title>BLOCK — 테트리스</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header"><a class="brand" href="./" aria-label="BLOCK 홈"><span class="brand-icon">▦</span> BLOCK<span class="brand-dot">.</span></a><span class="edition">THE CLASSIC, REIMAGINED</span><button id="sound" class="icon-button" aria-label="소리 켜기" aria-pressed="false">소리 OFF</button></header>
+    <section class="intro"><div class="eyebrow"><span></span> JUST ONE MORE BLOCK</div><h1>비우고, 다시 채우고.</h1><p>익숙한 블록, 새로운 기록. 나만의 리듬을 찾아보세요.</p></section>
+    <section class="game-layout" aria-label="테트리스 게임">
+      <aside class="left-panel"><div class="panel"><h2>HOLD <span>보관</span></h2><canvas id="hold" width="144" height="96" aria-label="보관한 블록"></canvas><p class="small">C 키로 블록 보관</p></div><div class="panel best-panel"><h2>PERSONAL BEST</h2><div class="best-icon">✦</div><strong id="best">0</strong><p class="small">나의 최고 점수</p></div><div class="tip"><span>✧ LITTLE TIP</span><p>한 번에 네 줄을 지우면<br>더 높은 점수를 얻어요.</p></div></aside>
+      <div class="board-shell"><div class="board-top"><span><i></i> <span id="status">READY TO PLAY</span></span><button id="pause" class="icon-button" aria-label="일시정지">Ⅱ</button></div><div class="board-wrap"><canvas id="board" width="300" height="600" aria-label="테트리스 게임판, 가로 10칸 세로 20칸"></canvas><div id="overlay" class="overlay"><div class="overlay-mark">▦</div><h2 id="overlay-title">READY?</h2><p id="overlay-text">블록을 쌓고, 줄을 완성하세요.</p><button id="start" class="primary-button">게임 시작 <span>→</span></button><span class="overlay-hint">ENTER 키로도 시작할 수 있어요</span></div></div><div class="board-bottom"><span>10 × 20</span><span>MAKE ROOM FOR MORE</span></div></div>
+      <aside class="right-panel"><div class="panel score-panel"><h2>SCORE <span>점수</span></h2><strong id="score">0</strong><div class="stats"><div><h2>LEVEL</h2><b id="level">01</b></div><div><h2>LINES</h2><b id="lines">0</b></div></div><div class="progress"><div id="progress"></div></div><p id="level-hint" class="small">다음 레벨까지 10줄</p></div><div class="panel next-panel"><h2>NEXT <span>다음 블록</span></h2><canvas id="next" width="144" height="240" aria-label="다음 세 개 블록"></canvas></div><button id="restart" class="restart-button">↻ 새 게임</button></aside>
+    </section>
+    <section class="controls" aria-label="키보드 조작법"><div><kbd>←</kbd><kbd>→</kbd><span>이동</span></div><div><kbd>↑</kbd><span>회전</span></div><div><kbd>↓</kbd><span>빠르게</span></div><div><kbd class="wide">SPACE</kbd><span>바로 놓기</span></div><div><kbd>C</kbd><span>보관</span></div><div><kbd>P</kbd><span>일시정지</span></div></section>
+    <div class="touch-controls" aria-label="터치 조작"><button data-action="hold">보관</button><button data-action="rotate">↻</button><button data-action="left">←</button><button data-action="down">↓</button><button data-action="right">→</button><button data-action="drop">바로 놓기</button></div>
+    <footer>작은 블록으로 만드는, 작은 몰입.<span>BUILT FOR YOUR NEXT HIGH SCORE</span></footer>
+  </main>
+</body>
+</html>
